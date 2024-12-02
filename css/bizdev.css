@@ -1,0 +1,43 @@
+/*=======================================================
+mv
+=======================================================*/
+.bl_mv {
+  background: url("../images/bizdev/mv_bg.jpg") top center/cover no-repeat;
+}
+.bl_mv_txt {
+  margin-bottom: min(75 / 1280 * 100vw, 75px);
+}
+@media screen and (max-width: 750px) {
+  .bl_mv {
+    background: url("../images/bizdev/mv_bg_sp.jpg") top center/cover no-repeat;
+  }
+}
+/*=======================================================
+feature
+=======================================================*/
+.bl_feature .el_sec_mainTtl .el_ttl_deco {
+  width: min(402 / 1280 * 100vw, 402px);
+}
+@media screen and (max-width: 750px) {
+  .bl_feature .el_sec_mainTtl .el_ttl_deco {
+    width: 603px;
+  }
+}
+/*=======================================================
+achievements
+=======================================================*/
+.bl_achievements .bl_item_childItem:first-of-type .bl_childItem_list > li:first-of-type .bl_childItem_def > dt {
+  padding: min(3 / 1280 * 100vw, 3px) 0;
+  line-height: calc(22/17);
+}
+.bl_achievements .bl_item_childItem:first-of-type .bl_childItem_list > li:first-of-type .bl_childItem_def > dd {
+  padding: min(5 / 1280 * 100vw, 5px) 0;
+}
+@media screen and (max-width: 750px) {
+  .bl_achievements .bl_item_childItem:first-of-type .bl_childItem_list > li:first-of-type .bl_childItem_def > dt {
+    padding: 2px 0;
+  }
+  .bl_achievements .bl_item_childItem:first-of-type .bl_childItem_list > li:first-of-type .bl_childItem_def > dd {
+    padding: 4px 0;
+  }
+}

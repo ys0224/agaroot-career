@@ -1,0 +1,244 @@
+/*=======================================================
+job_search
+=======================================================*/
+.bl_job_search.is-active {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  background: #F7F4F4;
+  overflow-y: scroll;
+}
+.bl_job_search.is-active .bl_search_ttl {
+  background: #3B3B3B;
+  color: #fff;
+  font-size: 34px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  line-height: 1.5;
+  padding: 25px 0 28px;
+  text-align: center;
+}
+.bl_job_search.is-active .bl_search_ttlWrapper {
+  position: relative;
+}
+.bl_job_search.is-active .bl_search_close {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  top: 50%;
+  left: 30px;
+  transform: translateY(-50%);
+}
+.bl_job_search.is-active .bl_search_form {
+  padding: 40px 30px 172px;
+}
+.bl_job_search.is-active .bl_form_list {
+  display: grid;
+  gap: 24px;
+}
+.bl_job_search.is-active .bl_form_list > li {
+  width: 100%;
+}
+.bl_job_search.is-active .bl_form_list > li .select {
+  border: 2px solid #ADADAD;
+  background: #fff;
+  border-radius: 2px;
+  padding: 22px 70px 26px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  font-size: 28px;
+  color: #ADADAD;
+  position: relative;
+}
+.bl_job_search.is-active .bl_form_list > li .select::after {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 16px 12px 0 12px;
+  border-color: #555555 transparent transparent transparent;
+  top: 50%;
+  right: 30px;
+  transform: translateY(-50%);
+}
+.bl_job_search.is-active .bl_form_list > li .select .checked {
+  color: #222222;
+}
+.bl_job_search.is-active .bl_form_list > li .select.is-active::after {
+  border-width: 0 12px 16px 12px;
+  border-color: transparent transparent #555555 transparent;
+}
+.bl_job_search.is-active .bl_form_list > li .bl_accordion {
+  display: none;
+}
+.bl_job_search.is-active .bl_form_list > li .bl_accordion.is-active {
+  display: block;
+  border: 2px solid #ADADAD;
+  border-top: none;
+  background: #fff;
+}
+.bl_job_search.is-active .bl_form_list > li .bl_accordion_list {
+  display: grid;
+  gap: 32px;
+  padding: 30px 28px;
+}
+.bl_job_search.is-active .bl_form_btm {
+  display: flex;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 16px 30px;
+  background: #F7F4F4;
+  width: 100%;
+  gap: 24px;
+}
+.bl_job_search.is-active .bl_form_btm #modal_form_num {
+  display: flex;
+  align-items: end;
+  gap: 10px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+}
+.bl_job_search.is-active .bl_form_btm #modal_form_num .el_num {
+  font-size: 56px;
+  color: #9B1613;
+}
+.bl_job_search.is-active .bl_form_btm #modal_form_num .el_unit {
+  font-size: 30px;
+  margin-bottom: 9px;
+}
+.bl_job_search.is-active .bl_form_btm #modal_form_reset button {
+  background: #ADADAD;
+  color: #fff;
+  width: 166px;
+  height: 96px;
+  border-radius: 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  padding-bottom: 2px;
+}
+.bl_job_search.is-active .bl_form_btm #modal_form_submit input {
+  background: linear-gradient(270deg, #BA322F 0%, #6E1412 100%);
+  width: 312px;
+  height: 96px;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 2px;
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+}
+label {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  letter-spacing: 0.06em;
+}
+input[type=checkbox] {
+  width: 44px;
+  height: 44px;
+  display: block;
+  border-radius: 3px;
+  background: #fff;
+  border: 2px solid #707070;
+  position: relative;
+}
+input[type=checkbox]:checked {
+  border: none;
+}
+input[type=checkbox]:checked::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: #9B1613;
+}
+input[type=checkbox]:checked::after {
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  height: 60%;
+  background: url(../images/common/checkbox_checked.svg) top center/contain no-repeat;
+}
+#select-job-type .bl_accordion_list {
+  padding: 0;
+  gap: 0;
+}
+#select-job-type .bl_accordion_item > label {
+  background: #EAEAEA;
+  font-weight: 700;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 19px 28px;
+}
+#select-job-type .bl_accordion_item:not(:first-of-type) > label {
+  border-top: 2px solid #fff;
+}
+#select-job-type .bl_accordion_item .bl_item_list {
+  display: grid;
+  gap: 32px;
+  padding: 32px 28px;
+}
+#select-location .bl_accordion_list {
+  padding: 0;
+  gap: 0;
+}
+#select-location .bl_accordion_item.is-active .bl_item_dttl::after {
+  border-width: 0 12px 16px 12px;
+  border-color: transparent transparent #555555 transparent;
+}
+#select-location .bl_accordion_item.is-active .bl_item_ditem {
+  display: block;
+}
+#select-location .bl_accordion_item.is-active .bl_item_ditem .bl_dd_list {
+  display: grid;
+  gap: 32px;
+  padding: 32px 28px;
+}
+#select-location .bl_accordion_item:not(:first-of-type) .bl_item_dttl {
+  border-top: 2px solid #fff;
+}
+#select-location .bl_accordion_item .bl_item_dttl {
+  padding: 19px 85px 19px 28px;
+  font-weight: 700;
+  background: #EAEAEA;
+  position: relative;
+}
+#select-location .bl_accordion_item .bl_item_dttl::after {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 16px 12px 0 12px;
+  border-color: #555555 transparent transparent transparent;
+  top: 50%;
+  right: 30px;
+  transform: translateY(-50%);
+}
+#select-location .bl_accordion_item .bl_item_ditem {
+  display: none;
+}

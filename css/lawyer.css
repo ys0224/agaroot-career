@@ -1,0 +1,108 @@
+@charset "UTF-8";
+/*=======================================================
+共通
+=======================================================*/
+.bl_head_logoTxt {
+  color: #fff;
+}
+/*=======================================================
+mv
+=======================================================*/
+.bl_mv {
+  background: url("../images/lawyer/mv_bg.jpg") top center/cover no-repeat;
+}
+@media screen and (max-width: 750px) {
+  .bl_mv {
+    background: url("../images/lawyer/mv_bg_sp.jpg") top center/cover no-repeat;
+  }
+}
+/*=======================================================
+achievements
+=======================================================*/
+.bl_achievements {
+  background: #fff;
+}
+.bl_achievements .bl_item_childItem {
+  background: #F4E6E6;
+}
+.bl_achievements .bl_item_childItem .bl_childItem_def > dd {
+  background: #fff;
+}
+/*=======================================================
+interview
+=======================================================*/
+.bl_interview {
+  padding: min(80 / 1280 * 100vw, 80px) 0;
+  background: #363636;
+}
+.bl_interview .el_sec_mainTtl {
+  color: #fff;
+}
+.bl_interview .el_sec_mainTtl::after {
+  width: min(70 / 1280 * 100vw, 70px);
+  background: url("../images/lawyer/ttl_deco_interview.svg") top center/contain no-repeat;
+}
+.bl_interview_slide {
+  width: min(528 / 1280 * 100vw, 528px);
+}
+.bl_interview_slidesContainer {
+  overflow: hidden;
+}
+.bl_interview_slidesContainerWrapper {
+  position: relative;
+  width: min(1088 / 1280 * 100vw, 1088px);
+  margin: 0 auto;
+}
+.bl_interview_slide a {
+  display: flex;
+}
+.bl_interview .bl_slide_btnWrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  z-index: 2;
+}
+.bl_interview .bl_slide_prev,
+.bl_interview .bl_slide_next {
+  width: min(40 / 1280 * 100vw, 40px);
+  height: min(56 / 1280 * 100vw, 56px);
+  background: url("../images/lawyer/interview_slider_arrow.svg") top center/cover no-repeat;
+}
+.bl_interview .bl_slide_prev::after,
+.bl_interview .bl_slide_next::after {
+  display: none;
+}
+.bl_interview .bl_slide_prev {
+  left: min(-56 / 1280 * 100vw, -56px);
+}
+.bl_interview .bl_slide_next {
+  transform: scale(-1, 1);
+  right: min(-56 / 1280 * 100vw, -56px);
+}
+@media screen and (max-width: 750px) {
+  .bl_interview {
+    padding: 80px 0;
+  }
+  .bl_interview .el_sec_mainTtl::after {
+    width: 94px;
+  }
+  .bl_interview_slide {
+    width: 630px;
+  }
+  .bl_interview_slidesContainerWrapper {
+    width: 630px;
+  }
+  .bl_interview .bl_slide_prev,
+  .bl_interview .bl_slide_next {
+    width: 54px;
+    height: 84px;
+  }
+  .bl_interview .bl_slide_prev {
+    left: -40px;
+  }
+  .bl_interview .bl_slide_next {
+    right: -40px;
+  }
+}

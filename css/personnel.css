@@ -1,0 +1,14 @@
+/*=======================================================
+mv
+=======================================================*/
+.bl_mv {
+  background: url("../images/personnel/mv_bg.jpg") top center/cover no-repeat;
+}
+.bl_mv_txt {
+  margin-bottom: min(75 / 1280 * 100vw, 75px);
+}
+@media screen and (max-width: 750px) {
+  .bl_mv {
+    background: url("../images/personnel/mv_bg_sp.jpg") top center/cover no-repeat;
+  }
+}
