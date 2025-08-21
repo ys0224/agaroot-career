@@ -1,0 +1,72 @@
+/*=======================================================
+head
+=======================================================*/
+.bl_jobs_head .bl_head_box {
+  width: min(828 / 1280 * 100vw, 828px);
+}
+.bl_jobs_head .bl_head_ttl {
+  margin-bottom: min(16 / 1280 * 100vw, 16px);
+}
+.bl_jobs_head .bl_head_free {
+  font-size: min(14 / 1280 * 100vw, 14px);
+  margin-bottom: min(24 / 1280 * 100vw, 24px);
+}
+@media screen and (max-width: 750px) {
+  .bl_jobs_head .bl_head_box {
+    width: 100%;
+  }
+  .bl_jobs_head .bl_head_ttl {
+    margin-bottom: 24px;
+  }
+  .bl_jobs_head .bl_head_free {
+    font-size: 24px;
+    margin-bottom: 36px;
+  }
+}
+/*=======================================================
+faq
+=======================================================*/
+.bl_faq_def > div > dd {
+  display: block;
+}
+.bl_faq_ttl {
+  font-size: min(20 / 1280 * 100vw, 20px);
+  font-weight: 700;
+  margin-bottom: min(40 / 1280 * 100vw, 40px);
+  text-align: center;
+}
+@media screen and (min-width: 751px) {
+  .bl_faq {
+    padding-bottom: min(72 / 1280 * 100vw, 72px);
+  }
+  .bl_faq_box {
+    width: min(828 / 1280 * 100vw, 828px);
+  }
+  .bl_faq_def {
+    gap: min(32 / 1280 * 100vw, 32px);
+  }
+  .bl_faq_def > div {
+    gap: min(8 / 1280 * 100vw, 8px);
+  }
+  .bl_faq_def > div > dt span {
+    padding: min(12 / 1280 * 100vw, 12px) 0 min(12 / 1280 * 100vw, 12px) min(48 / 1280 * 100vw, 48px);
+    font-size: min(16 / 1280 * 100vw, 16px);
+  }
+}
+@media screen and (max-width: 750px) {
+  .bl_faq_ttl {
+    font-size: 30px;
+    margin-bottom: 64px;
+  }
+}
+/*=======================================================
+既存CSS編集箇所
+=======================================================*/
+@media screen and (min-width: 751px) {
+  .bl_conditions {
+    padding: min(40 / 1280 * 100vw, 40px) 0 min(56 / 1280 * 100vw, 56px);
+  }
+  .bl_conditions_list {
+    width: min(828 / 1280 * 100vw, 828px);
+  }
+}
