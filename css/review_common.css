@@ -1,0 +1,40 @@
+/*=======================================================
+el_sec_mainTtl
+=======================================================*/
+.bl_review .el_sec_mainTtl {
+  padding-bottom: min(34/1280 * 100vw, 34px);
+  margin-bottom: min(40/1280 * 100vw, 40px);
+  font-size: min(32/1280 * 100vw, 32px);
+}
+.bl_review .el_sec_mainTtl::after {
+  width: min(64/1280 * 100vw, 64px);
+  height: min(20/1280 * 100vw, 20px);
+  background: url("../images/review/ttl_deco_review.svg") top center/contain no-repeat;
+}
+@media screen and (max-width: 750px) {
+  .bl_review .el_sec_mainTtl {
+    padding-bottom: 0;
+    margin-bottom: 48px;
+    font-size: 40px;
+  }
+}
+/*=======================================================
+item
+=======================================================*/
+.bl_item_tags {
+  padding: 0;
+  margin-bottom: min(8/1280 * 100vw, 8px);
+}
+.bl_item_stars {
+  display: block;
+  color: #c3a460;
+  margin-bottom: min(8/1280 * 100vw, 8px);
+}
+@media screen and (max-width: 750px) {
+  .bl_item_tags {
+    margin-bottom: 12px;
+  }
+  .bl_item_stars {
+    margin-bottom: 12px;
+  }
+}

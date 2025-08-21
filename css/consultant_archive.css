@@ -1,0 +1,11 @@
+/* =======================================================
+consultant_archive
+======================================================= */
+.bl_consultant.archive {
+  padding-bottom: min(64/1280 * 100vw, 64px);
+}
+@media screen and (max-width: 750px) {
+  .bl_consultant.archive {
+    padding-bottom: 80px;
+  }
+}

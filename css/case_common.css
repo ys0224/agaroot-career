@@ -1,0 +1,20 @@
+/*=======================================================
+el_sec_mainTtl
+=======================================================*/
+.bl_case .el_sec_mainTtl {
+  padding-bottom: min(34/1280 * 100vw, 34px);
+  margin-bottom: min(40/1280 * 100vw, 40px);
+  font-size: min(32/1280 * 100vw, 32px);
+}
+.bl_case .el_sec_mainTtl::after {
+  width: min(36/1280 * 100vw, 36px);
+  height: min(18/1280 * 100vw, 18px);
+  background: url("../images/case/ttl_deco_case.svg") top center/contain no-repeat;
+}
+@media screen and (max-width: 750px) {
+  .bl_case .el_sec_mainTtl {
+    padding-bottom: 0;
+    margin-bottom: 48px;
+    font-size: 40px;
+  }
+}

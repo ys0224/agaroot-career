@@ -1,0 +1,25 @@
+/*=======================================================
+review_archive
+=======================================================*/
+.bl_review.archive .bl_review_list {
+  grid-template-columns: repeat(3, 1fr);
+  gap: min(24/1280 * 100vw, 24px) min(32/1280 * 100vw, 32px);
+}
+.bl_review.archive .bl_review_item {
+  padding: min(24/1280 * 100vw, 24px);
+}
+.bl_review.archive .bl_review_item .bl_item_txt {
+  margin-bottom: min(22/1280 * 100vw, 22px);
+}
+@media screen and (max-width: 750px) {
+  .bl_review.archive .bl_review_list {
+    grid-template-columns: auto;
+    gap: 48px;
+  }
+  .bl_review.archive .bl_review_item {
+    padding: 24px 32px 40px;
+  }
+  .bl_review.archive .bl_review_item .bl_item_txt {
+    margin-bottom: 32px;
+  }
+}

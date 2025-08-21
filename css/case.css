@@ -1,0 +1,121 @@
+@charset "UTF-8";
+/* =======================================================
+共通
+======================================================= */
+.ly_main {
+  background: #F7F4F4;
+}
+.ly_head {
+  background: #fff;
+  box-shadow: 0 0 min(1.25vw, 16px) rgba(0, 0, 0, 0.32);
+}
+.bl_breadcrumbs {
+  margin-top: 32px;
+}
+.bl_pagenavi {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  margin-top: 40px;
+}
+.bl_pagenavi > * {
+  display: grid;
+  place-content: center;
+  width: 30px;
+  height: 32px;
+  font-size: 18px;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 0;
+  background: #A5A5A5;
+}
+.bl_pagenavi > *.page {
+  padding-bottom: 3px;
+  cursor: pointer;
+}
+.bl_pagenavi > *.current {
+  background: #9B1613;
+}
+.bl_pagenavi > *.middle {
+  color: #A5A5A5;
+  background: transparent;
+}
+.bl_pagenavi > *.prev {
+  position: relative;
+  cursor: pointer;
+}
+.bl_pagenavi > *.prev::before, .bl_pagenavi > *.prev::after {
+  position: absolute;
+  top: calc(50% - 1px);
+  left: 40%;
+  width: 8.4px;
+  height: 2px;
+  content: "";
+  background-color: #fff;
+  border-radius: 9999px;
+  transform-origin: 1px 50%;
+}
+.bl_pagenavi > *.prev::before {
+  transform: rotate(51.35deg);
+}
+.bl_pagenavi > *.prev::after {
+  transform: rotate(-51.35deg);
+}
+.bl_pagenavi > *.next {
+  position: relative;
+  cursor: pointer;
+}
+.bl_pagenavi > *.next::before, .bl_pagenavi > *.next::after {
+  position: absolute;
+  top: calc(50% - 1px);
+  right: 40%;
+  width: 8.4px;
+  height: 2px;
+  content: "";
+  background-color: #fff;
+  border-radius: 9999px;
+  transform-origin: calc(100% - 1px) 50%;
+}
+.bl_pagenavi > *.next::before {
+  transform: rotate(51.35deg);
+}
+.bl_pagenavi > *.next::after {
+  transform: rotate(-51.35deg);
+}
+@media screen and (width <= 750px) {
+  .bl_breadcrumbs {
+    margin-top: 48px;
+  }
+  .bl_pagenavi {
+    gap: 12px;
+    margin-top: 64px;
+  }
+  .bl_pagenavi > * {
+    width: 45px;
+    height: 48px;
+    font-size: 30px;
+  }
+  .bl_pagenavi > *.page {
+    padding-bottom: 4.5px;
+  }
+  .bl_pagenavi > *.prev::before, .bl_pagenavi > *.prev::after {
+    width: 12.6px;
+    height: 3px;
+  }
+  .bl_pagenavi > *.prev::before {
+    transform: rotate(48.8deg);
+  }
+  .bl_pagenavi > *.prev::after {
+    transform: rotate(-48.8deg);
+  }
+  .bl_pagenavi > *.next::before, .bl_pagenavi > *.next::after {
+    width: 12.6px;
+    height: 3px;
+  }
+  .bl_pagenavi > *.next::before {
+    transform: rotate(48.8deg);
+  }
+  .bl_pagenavi > *.next::after {
+    transform: rotate(-48.8deg);
+  }
+}

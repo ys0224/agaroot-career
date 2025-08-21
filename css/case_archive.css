@@ -1,0 +1,93 @@
+@charset "UTF-8";
+/* =======================================================
+カテゴリーから転職事例を探す
+======================================================= */
+.bl_search_def {
+  margin: 0 auto min(40/1280 * 100vw, 40px);
+}
+.bl_search_def dt {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: min(48/1280 * 100vw, 48px);
+  padding-bottom: min(2/1280 * 100vw, 2px);
+  font-size: min(20/1280 * 100vw, 20px);
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 0.06em;
+  background: linear-gradient(90deg, #6e5927 0%, #c3a45f 100%);
+}
+.bl_search_def dd {
+  background: #fff;
+  border: 1px solid #c3a45f;
+  border-top: none;
+}
+.bl_search_def dd .bl_dd_checkList {
+  display: flex;
+  gap: min(24/1280 * 100vw, 24px) min(16/1280 * 100vw, 16px);
+  flex-wrap: wrap;
+  padding: min(22/1280 * 100vw, 22px) min(24/1280 * 100vw, 24px) min(24/1280 * 100vw, 24px);
+}
+.bl_search_def dd .bl_dd_checkItem label {
+  display: flex;
+  gap: min(8/1280 * 100vw, 8px);
+  align-items: center;
+  font-size: min(14/1280 * 100vw, 14px);
+}
+.bl_search_def dd input[type=checkbox] {
+  position: relative;
+  display: block;
+  width: min(18/1280 * 100vw, 18px);
+  height: min(18/1280 * 100vw, 18px);
+  border: 1px solid #707070;
+  border-radius: min(2/1280 * 100vw, 2px);
+}
+.bl_search_def dd input[type=checkbox]:checked::before {
+  position: absolute;
+  top: min(1/1280 * 100vw, 1px);
+  left: min(5/1280 * 100vw, 5px);
+  width: min(6/1280 * 100vw, 6px);
+  height: min(10/1280 * 100vw, 10px);
+  content: "";
+  border-right: min(2/1280 * 100vw, 2px) solid #9b1613;
+  border-bottom: min(2/1280 * 100vw, 2px) solid #9b1613;
+  transform: rotate(50deg);
+}
+@media screen and (width <= 750px) {
+  .bl_search_def {
+    width: 100%;
+    margin-bottom: 48px;
+  }
+  .bl_search_def dt {
+    height: 72px;
+    padding-bottom: 4px;
+    font-size: 28px;
+    border-radius: 0;
+  }
+  .bl_search_def dd .bl_dd_checkList {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px 36px;
+    padding: 46px 39px;
+  }
+  .bl_search_def dd .bl_dd_checkItem {
+    min-width: calc((100% - 17px - 36px) / 2);
+  }
+  .bl_search_def dd .bl_dd_checkItem label {
+    gap: 16px;
+    font-size: 28px;
+  }
+  .bl_search_def dd input[type=checkbox] {
+    width: 32px;
+    height: 32px;
+    margin-top: 4px;
+    border-width: 2px;
+  }
+  .bl_search_def dd input[type=checkbox]:checked::before {
+    top: 0;
+    left: 9px;
+    width: 12px;
+    height: 20px;
+    border-width: 3px;
+  }
+}
