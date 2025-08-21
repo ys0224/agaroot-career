@@ -1,11 +1,127 @@
 /*=======================================================
+faq
+=======================================================*/
+.bl_faq {
+  padding: min(calc(80 / 1280 * 100vw), 80px) 0;
+}
+.bl_faq .el_sec_mainTtl {
+  padding-bottom: min(calc(36 / 1280 * 100vw), 36px);
+  margin-bottom: min(calc(50 / 1280 * 100vw), 50px);
+  font-size: min(calc(32 / 1280 * 100vw), 32px);
+}
+.bl_faq .el_sec_mainTtl::after {
+  background: url(../images/common/ttl_deco_faq.svg) top center / contain no-repeat;
+  width: min(calc(26 / 1280 * 100vw), 26px);
+  height: min(calc(20 / 1280 * 100vw), 20px);
+}
+.bl_faq_def > div {
+  gap: min(calc(12 / 1280 * 100vw), 12px);
+}
+.bl_faq_def > div > dt {
+  padding: 0 min(calc(66 / 1280 * 100vw), 66px) 0 min(calc(16 / 1280 * 100vw), 16px);
+}
+.bl_faq_def > div > dt::before {
+  right: min(calc(24 / 1280 * 100vw), 24px);
+}
+.bl_faq_def > div > dt::after {
+  right: min(calc(32 / 1280 * 100vw), 32px);
+  background: url(../images/common/faq_arrow.svg) top center / contain no-repeat;
+}
+.bl_faq_def > div > dt span {
+  font-size: min(calc(22 / 1280 * 100vw), 22px);
+  padding: min(calc(10 / 1280 * 100vw), 10px) 0 min(calc(14 / 1280 * 100vw), 14px) min(calc(52 / 1280 * 100vw), 52px);
+}
+.bl_faq_def > div > dt span::before {
+  width: min(calc(40 / 1280 * 100vw), 40px);
+  height: min(calc(40 / 1280 * 100vw), 40px);
+}
+.bl_faq_def > div > dt span::after {
+  background: url(../images/common/faq_q.svg) top center / contain no-repeat;
+  left: min(calc(15 / 1280 * 100vw), 15px);
+  width: min(calc(10 / 1280 * 100vw), 10px);
+  height: min(calc(28 / 1280 * 100vw), 28px);
+}
+.bl_faq_def > div > dd {
+  padding: min(calc(8 / 1280 * 100vw), 8px) 0 0 min(calc(72 / 1280 * 100vw), 72px);
+  font-size: min(calc(17 / 1280 * 100vw), 17px);
+}
+.bl_faq_def > div > dd::before {
+  width: min(calc(40 / 1280 * 100vw), 40px);
+  height: min(calc(40 / 1280 * 100vw), 40px);
+  left: min(calc(16 / 1280 * 100vw), 16px);
+}
+.bl_faq_def > div > dd::after {
+  width: min(calc(12 / 1280 * 100vw), 12px);
+  height: min(calc(24 / 1280 * 100vw), 24px);
+  top: min(calc(8 / 1280 * 100vw), 8px);
+  left: min(calc(30 / 1280 * 100vw), 30px);
+  background: url(../images/common/faq_a.svg) top center / contain no-repeat;
+}
+@media screen and (max-width: 750px) {
+  .bl_faq {
+    padding: 80px 0;
+  }
+  .bl_faq .el_sec_mainTtl {
+    font-size: 40px;
+    padding-bottom: 42px;
+    margin-bottom: 40px;
+  }
+  .bl_faq .el_sec_mainTtl::after {
+    display: block;
+    width: 34px;
+    height: 26px;
+  }
+  .bl_faq_def > div {
+    gap: 20px;
+  }
+  .bl_faq_def > div > dt {
+    padding: 0 70px 0 16px;
+  }
+  .bl_faq_def > div > dt::before {
+    right: 14px;
+  }
+  .bl_faq_def > div > dt::after {
+    right: 25px;
+  }
+  .bl_faq_def > div > dt span {
+    font-size: 28px;
+    padding: 14px 0 18px 64px;
+  }
+  .bl_faq_def > div > dt span::before {
+    width: 48px;
+    height: 48px;
+  }
+  .bl_faq_def > div > dt span::after {
+    width: 12px;
+    height: 34px;
+    left: 18px;
+  }
+  .bl_faq_def > div > dd {
+    padding: 0 0 0 80px;
+    font-size: 28px;
+  }
+  .bl_faq_def > div > dd::before {
+    width: 48px;
+    height: 48px;
+    border-width: 2px;
+    left: 16px;
+  }
+  .bl_faq_def > div > dd::after {
+    width: 14px;
+    height: 30px;
+    top: 9px;
+    left: 33px;
+  }
+}
+/*=======================================================
 cta
 =======================================================*/
 .bl_cta {
   padding: min(80 / 1280 * 100vw, 80px) 0;
-  background: url("../img/renewal/common/cta_bg.jpg") top center/cover no-repeat;
+  background: url("../images/common/cta_bg.jpg") top center/cover no-repeat;
 }
 .bl_cta .el_sec_mainTtl {
+  font-size: min(calc(32 / 1280 * 100vw), 32px);
   color: #fff;
   padding-bottom: min(36 / 1280 * 100vw, 36px);
   margin-bottom: min(48 / 1280 * 100vw, 48px);
@@ -13,7 +129,7 @@ cta
 .bl_cta .el_sec_mainTtl::after {
   width: min(60 / 1280 * 100vw, 60px);
   height: min(17 / 1280 * 100vw, 17px);
-  background: url("../img/renewal/common/ttl_deco_contact.svg") top center/contain no-repeat;
+  background: url("../images/common/ttl_deco_contact.svg") top center/contain no-repeat;
 }
 .bl_cta_btnList {
   display: flex;
@@ -35,11 +151,12 @@ cta
 }
 @media screen and (max-width: 750px) {
   .bl_cta {
-    background: url("../img/renewal/common/cta_bg_sp.jpg") top center/cover no-repeat;
+    background: url("../images/common/cta_bg_sp.jpg") top center/cover no-repeat;
     padding-top: 80px;
     height: 716px;
   }
   .bl_cta .el_sec_mainTtl {
+    font-size: 40px;
     padding-bottom: 38px;
     margin-bottom: 56px;
   }
@@ -65,7 +182,7 @@ mv
 =======================================================*/
 .bl_mv {
   height: min(700 / 1280 * 100vw, 700px);
-  background: url("../img/renewal/top/mv_bg.jpg") top center/cover no-repeat;
+  background: url("../images/top/mv_bg.jpg") top center/cover no-repeat;
   padding-top: min(142 / 1280 * 100vw, 142px);
 }
 .bl_mv_conts {
@@ -104,7 +221,7 @@ mv
 @media screen and (max-width: 750px) {
   .bl_mv {
     height: 990px;
-    background: url("../img/renewal/top/mv_bg_sp.jpg") top center/cover no-repeat;
+    background: url("../images/top/mv_bg_sp.jpg") top center/cover no-repeat;
     padding-top: 192px;
   }
   .bl_mv_conts {
@@ -149,7 +266,7 @@ about
 .bl_about_list {
   display: grid;
   gap: min(32 / 1280 * 100vw, 32px);
-  grid-template: repeat(2, auto)/repeat(3, 1fr);
+  grid-template: repeat(2, auto) / repeat(3, 1fr);
 }
 .bl_about_item a {
   padding: 0 0 min(3 / 1280 * 100vw, 3px);
@@ -168,7 +285,7 @@ about
 .bl_about_item a span::before {
   position: absolute;
   content: "";
-  background: linear-gradient(144deg, #BA322F 0%, #6E1412 100%);
+  background: linear-gradient(144deg, #ba322f 0%, #6e1412 100%);
   width: min(80 / 1280 * 100vw, 80px);
   height: min(80 / 1280 * 100vw, 80px);
   top: 50%;
@@ -190,27 +307,27 @@ about
   content: "";
   width: min(20 / 1280 * 100vw, 20px);
   height: min(20 / 1280 * 100vw, 20px);
-  background: url("../img/renewal/top/about_item_arrow.svg") top center/contain no-repeat;
+  background: url("../images/top/about_item_arrow.svg") top center/contain no-repeat;
   bottom: min(6 / 1280 * 100vw, 6px);
   right: min(6 / 1280 * 100vw, 6px);
 }
 #top_about_lawyer a span::after {
-  background: url("../img/renewal/top/about_lawyer.svg") top center/contain no-repeat;
+  background: url("../images/top/about_lawyer.svg") top center/contain no-repeat;
 }
 #top_about_legal a span::after {
-  background: url("../img/renewal/top/about_legal.svg") top center/contain no-repeat;
+  background: url("../images/top/about_legal.svg") top center/contain no-repeat;
 }
 #top_about_accounting a span::after {
-  background: url("../img/renewal/top/about_accounting.svg") top center/contain no-repeat;
+  background: url("../images/top/about_accounting.svg") top center/contain no-repeat;
 }
 #top_about_human a span::after {
-  background: url("../img/renewal/top/about_human.svg") top center/contain no-repeat;
+  background: url("../images/top/about_human.svg") top center/contain no-repeat;
 }
 #top_about_corporate a span::after {
-  background: url("../img/renewal/top/about_corporate.svg") top center/contain no-repeat;
+  background: url("../images/top/about_corporate.svg") top center/contain no-repeat;
 }
 #top_about_development a span::after {
-  background: url("../img/renewal/top/about_development.svg") top center/contain no-repeat;
+  background: url("../images/top/about_development.svg") top center/contain no-repeat;
 }
 @media screen and (max-width: 750px) {
   .bl_about {
@@ -253,12 +370,20 @@ about
     right: 6px;
   }
   #top_about_lawyer a span::after {
-    background: url("../img/renewal/top/about_lawyer.svg") top center/contain no-repeat;
+    background: url("../images/top/about_lawyer.svg") top center/contain no-repeat;
   }
   #top_about_legal a span::after {
-    background: url("../img/renewal/top/about_legal.svg") top center/contain no-repeat;
+    background: url("../images/top/about_legal.svg") top center/contain no-repeat;
   }
   #top_about_accounting a {
     font-size: 30px;
+  }
+}
+/*=======================================================
+footer
+=======================================================*/
+@media screen and (max-width: 750px) {
+  .bl_foot_btmBnr{
+    padding-top: 20px;
   }
 }

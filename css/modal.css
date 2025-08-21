@@ -17,26 +17,27 @@ modal
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  padding: min(156 / 1280 * 100vw, 156px) 0;
+  padding: min(150 / 1280 * 100vw, 150px) 0;
   width: 100%;
   height: 100%;
   overflow: scroll;
 }
 .bl_modal_content {
   margin: 0 auto;
-  padding: min(40 / 1280 * 100vw, 40px) 0;
+  padding: min(64 / 1280 * 100vw, 64px) 0;
   background: #fff;
   width: min(1200 / 1280 * 100vw, 1200px);
   position: relative;
 }
 .bl_modal_close {
   position: absolute;
-  top: min(16 / 988 * 100vw, 16px);
-  right: min(16 / 988 * 100vw, 16px);
+  top: min(14 / 988 * 100vw, 14px);
+  right: min(17 / 988 * 100vw, 17px);
 }
 .bl_modal .bl_content_conts {
   width: min(828 / 988 * 100vw, 828px);
   margin: 0 auto;
+  font-size: min(calc(14 / 988 * 100vw), 14px);
 }
 .bl_modal .bl_content_ttl {
   font-size: min(24 / 988 * 100vw, 24px);
@@ -45,6 +46,22 @@ modal
   padding-bottom: min(16 / 988 * 100vw, 16px);
   border-bottom: 1px solid #CCCCCC;
   margin-bottom: min(24 / 988 * 100vw, 24px);
+}
+.bl_modal .bl_content_free-word{
+  margin-bottom: min(24 / 988 * 100vw, 24px);
+}
+.bl_modal .bl_content_free-word .bl_free-word_ttl{
+  font-size: min(16 / 988 * 100vw, 16px);
+  margin-bottom: min(8 / 988 * 100vw, 8px);
+}
+.bl_modal .bl_content_free-word .bl_free-word_input{
+  padding: min(11 / 988 * 100vw, 11px) min(12 / 988 * 100vw, 12px) min(13 / 988 * 100vw, 13px);
+  border: min(1 / 988 * 100vw, 1px) solid #ADADAD;
+  border-radius: min(2 / 988 * 100vw, 2px);
+  width: 100%;
+}
+.bl_modal .bl_content_free-word .bl_free-word_input::placeholder{
+  color: #ADADAD;
 }
 .bl_modal .bl_content_box {
   border: 1px solid #707070;
@@ -55,7 +72,8 @@ modal
 }
 .bl_modal .bl_content_box .bl_box_ttl {
   background: #F0DEDE;
-  padding: min(10 / 988 * 100vw, 10px) min(16 / 988 * 100vw, 16px) min(12 / 988 * 100vw, 12px);
+  font-size: min(calc(16 / 988 * 100vw), 16px);
+  padding: min(8 / 988 * 100vw, 8px) min(12 / 988 * 100vw, 12px) min(11 / 988 * 100vw, 11px);
 }
 .bl_modal .bl_content_box .bl_box_list {
   padding: min(16 / 988 * 100vw, 16px);
@@ -106,8 +124,15 @@ modal
   border-left: none;
   border-right: none;
 }
+.bl_modal .bl_content_box.location .bl_box_item .bl_item_ditem .bl_dd_item:nth-of-type(5n){
+  display: flex;
+}
+.bl_modal .bl_content_box.location .bl_box_item .bl_item_ditem .bl_dd_item:nth-of-type(5n)::after {
+  content: "";
+  width: 100px;
+}
 .bl_modal .bl_content_box.location .bl_box_item .bl_item_ditem .bl_dd_item:nth-of-type(5n + 2) {
-  min-width: min(107 / 988 * 100vw, 107px);
+  min-width: min(89 / 988 * 100vw, 89px);
 }
 .bl_modal .bl_content_box.location .bl_box_item:not(:first-of-type) .bl_item_dttl,
 .bl_modal .bl_content_box.location .bl_box_item:not(:first-of-type) .bl_dd_list {
@@ -123,10 +148,10 @@ modal
   gap: min(16 / 988 * 100vw, 16px) min(24 / 988 * 100vw, 24px);
 }
 .bl_modal .bl_content_btn {
-  margin: min(40 / 988 * 100vw, 40px) auto 0;
-  width: min(280 / 988 * 100vw, 280px);
-  height: min(56 / 988 * 100vw, 56px);
-  font-size: min(18 / 988 * 100vw, 18px);
+  margin: min(24 / 988 * 100vw, 24px) auto 0;
+  width: min(300 / 988 * 100vw, 300px);
+  height: min(48 / 988 * 100vw, 48px);
+  font-size: min(16 / 988 * 100vw, 16px);
 }
 .bl_modal .bl_content_btn::after {
   width: min(7 / 988 * 100vw, 7px);
@@ -134,13 +159,13 @@ modal
 }
 label {
   display: flex;
-  gap: min(12 / 988 * 100vw, 12px);
+  gap: min(10 / 988 * 100vw, 10px);
   align-items: center;
   letter-spacing: 0.06em;
 }
 input[type=checkbox] {
-  width: min(24 / 988 * 100vw, 24px);
-  height: min(24 / 988 * 100vw, 24px);
+  width: min(20 / 988 * 100vw, 20px);
+  height: min(20 / 988 * 100vw, 20px);
   display: block;
   border-radius: 2px;
   background: #fff;

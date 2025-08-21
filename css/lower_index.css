@@ -7,7 +7,7 @@ lawyer共通
 }
 .bl_breadcrumbs {
   background: #363636;
-  margin-bottom: min(32 / 1280 * 100vw, 32px);
+  margin-bottom: min(24 / 1280 * 100vw, 24px);
 }
 .bl_breadcrumbs_item {
   color: #fff;
@@ -17,7 +17,7 @@ lawyer共通
 }
 @media screen and (max-width: 750px) {
   .bl_breadcrumbs {
-    margin-bottom: 64px;
+    margin-bottom: 40px;
   }
 }
 /*=======================================================
@@ -34,12 +34,15 @@ card
   margin-bottom: min(16 / 1280 * 100vw, 16px);
 }
 .bl_card_ttl {
-  padding-bottom: min(20 / 1280 * 100vw, 20px);
-  margin-bottom: min(20 / 1280 * 100vw, 20px);
+  padding-bottom: min(16 / 1280 * 100vw, 16px);
+  margin-bottom: min(16 / 1280 * 100vw, 16px);
   border-bottom: 1px solid #9b1613;
-  font-size: min(21 / 1280 * 100vw, 21px);
+  font-size: min(16 / 1280 * 100vw, 16px);
   font-weight: 700;
   text-align: center;
+}
+.bl_card_txt {
+  font-size: min(14 / 1280 * 100vw, 14px);
 }
 @media screen and (max-width: 750px) {
   .bl_card {
@@ -53,10 +56,13 @@ card
     margin-bottom: 32px;
   }
   .bl_card_ttl {
-    padding-bottom: 34px;
-    margin-bottom: 30px;
+    padding-bottom: 32px;
+    margin-bottom: 32px;
     border-width: 2px;
-    font-size: 34px;
+    font-size: 30px;
+  }
+  .bl_card_txt {
+    font-size: 24px;
   }
 }
 /*=======================================================
@@ -72,13 +78,11 @@ mv
 }
 .bl_mv_ttl {
   width: min(416 / 1280 * 100vw, 416px);
-  margin-bottom: min(58 / 1280 * 100vw, 58px);
+  margin-bottom: min(56 / 1280 * 100vw, 56px);
 }
 .bl_mv_txt {
-  margin-bottom: min(48 / 1280 * 100vw, 48px);
-}
-.bl_mv_txt.pc {
-  display: block;
+  font-size: min(14 / 1280 * 100vw, 14px);
+  margin-bottom: min(56 / 1280 * 100vw, 56px);
 }
 .bl_mv_btn {
   margin-right: auto;
@@ -94,35 +98,15 @@ mv
   }
   .bl_mv_ttl {
     width: 518px;
+    margin-bottom: 107px;
+  }
+  .bl_mv_txt {
+    width: 470px;
+    font-size: 24px;
     margin-bottom: 88px;
   }
-  .bl_mv_txt.pc {
-    display: none;
-  }
-  .bl_mv_box {
-    display: grid;
-    gap: 32px;
-    margin-bottom: 40px;
-  }
-  .bl_mv_box .bl_box_list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
-    width: 430px;
-  }
-  .bl_mv_box .bl_box_item {
-    background: #363636;
-    color: #fff;
-    padding: 0 16px 3px;
-    font-size: 24px;
-    font-weight: 700;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 48px;
-  }
   .bl_mv_btn {
-    margin-right: auto;
+    width: 100%;
   }
 }
 /*=======================================================
@@ -134,18 +118,39 @@ search
 }
 .bl_search .el_sec_mainTtl {
   color: #fff;
-  margin-bottom: min(32 / 1280 * 100vw, 32px);
+}
+.bl_search .bl_word_def {
+  max-width: min(1024 / 1280 * 100vw, 1024px);
+  margin: 0 auto min(24 / 1280 * 100vw, 24px);
+}
+.bl_search .bl_word_dttl {
+  color: #ffffff;
+  font-size: min(14 / 1280 * 100vw, 14px);
+  margin-bottom: min(10 / 1280 * 100vw, 10px);
+  font-weight: 700;
+}
+.bl_search .bl_word_ditem input {
+  background: #fff;
+  width: 100%;
+  height: min(calc(40 / 1280 * 100vw), 40px);
+  border-radius: min(calc(4 / 1280 * 100vw), 4px);
+  padding: min(calc(9 / 1280 * 100vw), 9px) min(calc(16 / 1280 * 100vw), 16px) min(calc(11 / 1280 * 100vw), 11px);
+  font-size: min(calc(14 / 1280 * 100vw), 14px);
+}
+.bl_search .bl_word_ditem input::placeholder {
+  font-family: "noto-sans-jp", "ヒラギノ角ゴ ProN", "Hiragino Kaku Gothic ProN", "游ゴシック Medium", "游ゴシック体", "Yu Gothic Medium", YuGothic, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
 }
 .bl_search .bl_select_list {
   display: flex;
   justify-content: center;
   gap: min(32 / 1280 * 100vw, 32px);
-  margin-bottom: min(40 / 1280 * 100vw, 40px);
+  margin-bottom: min(24 / 1280 * 100vw, 24px);
   flex-wrap: wrap;
 }
 .bl_search .bl_select_item {
+  width: min(320 / 1280 * 100vw, 320px);
+  height: min(48 / 1280 * 100vw, 48px);
   position: relative;
-  z-index: 2;
 }
 .bl_search .bl_select_item::after {
   position: absolute;
@@ -153,67 +158,27 @@ search
   width: min(15 / 1280 * 100vw, 15px);
   height: min(9 / 1280 * 100vw, 9px);
   background: url("../images/common/search-select-arrow__red.svg") top center/contain no-repeat;
-  top: min(29 / 1280 * 100vw, 29px);
+  top: 50%;
   right: min(16 / 1280 * 100vw, 16px);
+  transform: translateY(-50%);
   pointer-events: none;
 }
-.bl_search .bl_select_item.is_active::after {
-  transform: rotate(180deg);
-}
-.bl_search .bl_select_item button {
-  display: block;
-  width: min(320 / 1280 * 100vw, 320px);
-  height: min(64 / 1280 * 100vw, 64px);
+.bl_search .bl_select_item select {
+  font-family: "noto-sans-jp", "ヒラギノ角ゴ ProN", "Hiragino Kaku Gothic ProN", "游ゴシック Medium", "游ゴシック体", "Yu Gothic Medium", YuGothic, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+  font-size: min(14 / 1280 * 100vw, 14px);
+  width: 100%;
+  height: 100%;
   background: #fff;
+  padding: min(13 / 1280 * 100vw, 13px) min(24 / 1280 * 100vw, 24px) min(15 / 1280 * 100vw, 15px);
   border-radius: min(4 / 1280 * 100vw, 4px);
-  padding-right: min(42 / 1280 * 100vw, 42px);
-  text-align: left;
-}
-.bl_search .bl_select_item button:hover {
-  opacity: 1;
-}
-.bl_search .bl_select_item .bl_item_btn_inner {
-  display: flex;
-  padding: min(18 / 1280 * 100vw, 18px) 0 min(21 / 1280 * 100vw, 21px) min(24 / 1280 * 100vw, 24px);
-  overflow: scroll;
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-}
-.bl_search .bl_select_item .bl_item_btn_conts {
-  white-space: nowrap;
-}
-.bl_search .bl_select_item.is_active button {
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
-}
-.bl_search .bl_select_item .bl_item_contsWrapper {
-  display: none;
-}
-.bl_search .bl_select_item.is_active .bl_item_contsWrapper {
-  display: block;
-  overflow-y: scroll;
-  height: min(260 / 1280 * 100vw, 260px);
-  border-bottom-left-radius: min(4 / 1280 * 100vw, 4px);
-  border-bottom-right-radius: min(4 / 1280 * 100vw, 4px);
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-}
-.bl_search .bl_select_item .bl_conts_list {
-  background: #fff;
-  padding: 0 min(24 / 1280 * 100vw, 24px) min(21 / 1280 * 100vw, 21px);
-  display: none;
-  gap: min(8 / 1280 * 100vw, 8px);
-}
-.bl_search .bl_select_item.is_active .bl_conts_list {
-  display: grid;
 }
 .bl_search_def {
   width: min(1024 / 1280 * 100vw, 1024px);
-  margin: 0 auto min(40 / 1280 * 100vw, 40px);
+  margin: 0 auto min(24 / 1280 * 100vw, 24px);
 }
 .bl_search_def dt {
   color: #fff;
-  font-size: min(18 / 1280 * 100vw, 18px);
+  font-size: min(16 / 1280 * 100vw, 16px);
   font-weight: 700;
   letter-spacing: 0.06em;
   background: linear-gradient(90deg, #6e5927 0%, #c3a45f 100%);
@@ -226,27 +191,26 @@ search
 }
 .bl_search_def dd {
   background: #fff;
-  padding-bottom: min(24 / 1280 * 100vw, 24px);
+  padding-bottom: min(15 / 1280 * 100vw, 15px);
 }
 .bl_search_def dd .bl_dd_checkList {
   display: flex;
   gap: min(16 / 1280 * 100vw, 16px) min(24 / 1280 * 100vw, 24px);
   flex-wrap: wrap;
-  padding: min(24 / 1280 * 100vw, 24px) min(36 / 1280 * 100vw, 36px);
-  height: min(114 / 1280 * 100vw, 114px);
+  padding: min(16 / 1280 * 100vw, 16px) min(100 / 1280 * 100vw, 100px);
+  height: min(88 / 1280 * 100vw, 88px);
   overflow: hidden;
 }
 .bl_search_def dd .bl_dd_checkList.open {
   height: auto;
   overflow: visible;
 }
-.bl_search .bl_select_item .bl_conts_item label,
 .bl_search_def dd .bl_dd_checkItem label {
   display: flex;
   align-items: center;
+  font-size: min(14 / 1280 * 100vw, 14px);
   gap: min(10 / 1280 * 100vw, 10px);
 }
-.bl_search .bl_select_item .bl_conts_item label input[type="checkbox"],
 .bl_search_def dd input[type="checkbox"] {
   position: relative;
   width: min(16 / 1280 * 100vw, 16px);
@@ -255,7 +219,6 @@ search
   border: 1px solid #363636;
   margin-top: min(3 / 1280 * 100vw, 3px);
 }
-.bl_search .bl_select_item .bl_conts_item label input[type="checkbox"]:checked::before,
 .bl_search_def dd input[type="checkbox"]:checked::before {
   position: absolute;
   top: min(1 / 1280 * 100vw, 1px);
@@ -268,15 +231,16 @@ search
   content: "";
 }
 .bl_search_def dd .bl_dd_display {
-  text-align: center;
+  display: flex;
+  justify-content: center;
 }
 .bl_search_def dd .bl_dd_display button {
   color: #9b1613;
-  font-size: min(18 / 1280 * 100vw, 18px);
+  font-size: min(14 / 1280 * 100vw, 14px);
   font-weight: 700;
   position: relative;
-  padding-right: min(23 / 1280 * 100vw, 23px);
-  margin-left: min(23 / 1280 * 100vw, 23px);
+  padding-right: min(20 / 1280 * 100vw, 20px);
+  margin-left: min(20 / 1280 * 100vw, 20px);
 }
 .bl_search_def dd .bl_dd_display button::after {
   position: absolute;
@@ -303,48 +267,44 @@ search
   .bl_search .el_sec_mainTtl {
     margin-bottom: 56px;
   }
+  .bl_search .bl_word_def {
+    max-width: none;
+    margin: 0 auto 32px;
+  }
+  .bl_search .bl_word_dttl {
+    font-size: 24px;
+    margin-bottom: 24px;
+  }
+  .bl_search .bl_word_ditem input {
+    height: 80px;
+    border-radius: 4px;
+    padding: 21px 30px 24px;
+    font-size: 24px;
+  }
   .bl_search .bl_select_list {
     gap: 30px;
-    margin-bottom: 56px;
+    margin-bottom: 32px;
+  }
+  .bl_search .bl_select_item {
+    width: 330px;
+    height: 80px;
   }
   .bl_search .bl_select_item::after {
     width: 20px;
     height: 12px;
     background: url("../images/common/search-select-arrow__red-sp.svg") top center/contain no-repeat;
-    top: 38px;
     right: 24px;
   }
-  .bl_search .bl_select_item button {
-    width: 330px;
-    height: 88px;
-    padding-right: 56px;
-    border-radius: 4px;
-  }
-  .bl_search .bl_select_item .bl_item_btn_inner {
-    padding: 22px 0 26px 30px;
-  }
-  .bl_search .bl_select_item.is_active .bl_item_contsBox {
-    padding-top: 96px;
-    margin-top: -88px;
-    background: #fff;
-    border-radius: 4px;
-  }
-  .bl_search .bl_select_item.is_active .bl_item_contsWrapper {
-    height: 560px;
-  }
-  .bl_search .bl_select_item .bl_conts_list {
-    padding: 0 30px 26px;
-    gap: 24px;
-  }
-  .bl_search .bl_select_item.is_active .bl_conts_list {
-    display: grid;
+  .bl_search .bl_select_item select {
+    padding: 21px 58px 24px 30px;
+    font-size: 24px;
   }
   .bl_search_def {
     width: 100%;
-    margin-bottom: 56px;
+    margin-bottom: 32px;
   }
   .bl_search_def dt {
-    font-size: 32px;
+    font-size: 28px;
     border-radius: 0;
     height: 72px;
     padding-bottom: 4px;
@@ -354,24 +314,22 @@ search
   }
   .bl_search_def dd .bl_dd_checkList {
     gap: 24px 36px;
-    padding: 40px 0 40px 40px;
+    padding: 46px 0 46px 39px;
     height: 368px;
   }
   .bl_search_def dd .bl_dd_checkItem {
     min-width: calc((100% - 17px - 36px) / 2);
   }
-  .bl_search .bl_select_item .bl_conts_item label,
   .bl_search_def dd .bl_dd_checkItem label {
     gap: 16px;
+    font-size: 28px;
   }
-  .bl_search .bl_select_item .bl_conts_item label input[type="checkbox"],
   .bl_search_def dd input[type="checkbox"] {
     width: 32px;
     height: 32px;
     border-width: 2px;
     margin-top: 4px;
   }
-  .bl_search .bl_select_item .bl_conts_item label input[type="checkbox"]:checked::before,
   .bl_search_def dd input[type="checkbox"]:checked::before {
     top: 0;
     left: 9px;
@@ -398,41 +356,37 @@ search
 feature
 =======================================================*/
 .bl_feature {
-  padding: min(80 / 1280 * 100vw, 80px) 0;
+  padding: min(64 / 1280 * 100vw, 64px) 0;
   background: #f7f4f4;
 }
 .bl_feature .el_sec_mainTtl {
-  font-size: min(32 / 1280 * 100vw, 32px);
   letter-spacing: 0.06em;
-  line-height: calc(46 / 32);
+  line-height: calc(29 / 20);
 }
 .bl_feature .el_sec_mainTtl .el_ttl_deco {
   background: linear-gradient(270deg, #ba322f 0%, #6e1412 100%);
   color: #fff;
-  font-size: min(24 / 1280 * 100vw, 24px);
+  font-size: min(16 / 1280 * 100vw, 16px);
   font-weight: 700;
   letter-spacing: 0.06em;
-  width: min(376 / 1280 * 100vw, 376px);
-  height: min(36 / 1280 * 100vw, 36px);
+  width: min(244 / 1280 * 100vw, 244px);
+  height: min(28 / 1280 * 100vw, 28px);
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-bottom: min(1 / 1280 * 100vw, 1px);
-  margin: 0 auto min(12 / 1280 * 100vw, 12px);
+  padding-bottom: min(2 / 1280 * 100vw, 2px);
+  margin: 0 auto min(8 / 1280 * 100vw, 8px);
 }
 @media screen and (max-width: 750px) {
   .bl_feature {
     padding: 80px 0;
   }
-  .bl_feature .el_sec_mainTtl {
-    font-size: 40px;
-  }
   .bl_feature .el_sec_mainTtl .el_ttl_deco {
-    font-size: 32px;
-    width: 514px;
-    height: 64px;
-    padding-bottom: 4px;
-    margin-bottom: 24px;
+    font-size: 28px;
+    padding-bottom: 2px;
+    margin-bottom: 16px;
+    width: 462px;
+    height: 58px;
   }
 }
 /*=======================================================
@@ -444,21 +398,21 @@ achievements
 }
 .bl_achievements .el_sec_mainTtl::after {
   background: url("../images/lawyer/ttl_deco_achievements.svg") top center/contain no-repeat;
-  width: min(106 / 1280 * 100vw, 106px);
+  width: min(82 / 1280 * 100vw, 82px);
 }
 .bl_achievements_list {
   display: flex;
   flex-direction: column;
-  gap: min(64 / 1280 * 100vw, 64px);
+  gap: min(24 / 1280 * 100vw, 24px);
 }
 .bl_achievements .bl_item_ttl {
   background: #363636;
   color: #fff;
   padding: min(7 / 1280 * 100vw, 7px) 0 min(9 / 1280 * 100vw, 9px);
-  font-size: min(28 / 1280 * 100vw, 28px);
+  font-size: min(16 / 1280 * 100vw, 16px);
   letter-spacing: 0.06em;
   text-align: center;
-  margin-bottom: min(40 / 1280 * 100vw, 40px);
+  margin-bottom: min(16 / 1280 * 100vw, 16px);
 }
 .bl_achievements .bl_item_childList {
   display: flex;
@@ -468,7 +422,7 @@ achievements
 .bl_achievements .bl_item_childItem {
   width: calc((100% - min(16 / 1280 * 100vw, 16px) * 3) / 4);
   margin-top: min(56 / 1280 * 100vw, 56px);
-  padding: min(80 / 1280 * 100vw, 80px) min(16 / 1280 * 100vw, 16px) min(24 / 1280 * 100vw, 24px);
+  padding: min(72 / 1280 * 100vw, 72px) min(34 / 1280 * 100vw, 34px) min(16 / 1280 * 100vw, 16px);
   background: #fff;
   position: relative;
 }
@@ -494,9 +448,13 @@ achievements
   border-style: solid;
   border-width: min(13 / 1280 * 100vw, 13px) min(16 / 1280 * 100vw, 16px) 0 min(16 / 1280 * 100vw, 16px);
   border-color: #363636 transparent transparent transparent;
-  bottom: min(103 / 1280 * 100vw, 103px);
+  bottom: min(72 / 1280 * 100vw, 72px);
   left: 50%;
   transform: translateX(-50%);
+}
+.bl_achievements .bl_item_childItem .bl_childItem_def {
+  font-size: min(14 / 1280 * 100vw, 14px);
+  line-height: calc(20 / 14);
 }
 .bl_achievements .bl_item_childItem .bl_childItem_list > li:first-of-type .bl_childItem_def > dt {
   background: #363636;
@@ -509,12 +467,12 @@ achievements
   font-weight: 700;
 }
 .bl_achievements .bl_item_childItem .bl_childItem_def > dt {
-  padding: min(4 / 1280 * 100vw, 4px) 0 min(6 / 1280 * 100vw, 6px);
+  padding: min(3 / 1280 * 100vw, 3px) 0 min(5 / 1280 * 100vw, 5px);
   text-align: center;
   color: #fff;
 }
 .bl_achievements .bl_item_childItem .bl_childItem_def > dd {
-  padding: min(10 / 1280 * 100vw, 10px) 0 min(13 / 1280 * 100vw, 13px);
+  padding: min(3 / 1280 * 100vw, 3px) 0 min(5 / 1280 * 100vw, 5px);
   background: #f7f4f4;
   text-align: center;
 }
@@ -529,9 +487,9 @@ achievements
     gap: 80px;
   }
   .bl_achievements .bl_item_ttl {
-    padding: 17px 16px 20px;
-    font-size: 36px;
-    margin-bottom: 40px;
+    padding: 12px 16px 14px;
+    font-size: 32px;
+    margin-bottom: 24px;
   }
   .bl_achievements .bl_item_childList {
     gap: 34px;
@@ -558,6 +516,7 @@ achievements
   }
   .bl_achievements .bl_item_childItem .bl_childItem_def > dd {
     padding: 7px 0 9px;
+    font-size: 28px;
   }
 }
 /*=======================================================

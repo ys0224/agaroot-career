@@ -37,14 +37,13 @@
     <div class="ly_allWrapper">
       <header class="ly_head">
         <div class="ly_head_inner bl_head">
+
+          <button class="sp bl_head_search">求人検索</button>
+
           <a href="../" class="bl_head_logoGroup">
-            <span class="is_notScroll bl_head_logo">
-              <img src="../images/common/logo_white.svg" alt="AGAROOT CAREER" width="212" height="48">
-            </span>
-            <span class="is_scroll bl_head_logo">
+            <span class="bl_head_logo">
               <img src="../images/common/logo.svg" alt="AGAROOT CAREER" width="271" height="68">
             </span>
-            <p class="bl_head_logoTxt">弁護士専門の転職エージェント</p>
           </a>
 
           <ul class="bl_head_linkList">
@@ -66,19 +65,15 @@
             </li>
           </ul>
 
-          <div class="bl_head_rightArea sp">
+          <button class="bl_burger">
+            <span class="bl_burger_bars">
+              <span class="bl_burger_bar"></span>
+              <span class="bl_burger_bar"></span>
+              <span class="bl_burger_bar"></span>
+            </span>
+            <span class="bl_burger_txt">MENU</span>
+          </button><!-- /.bl_header_burger -->
 
-            <button class="sp bl_head_search">求人検索</button>
-
-            <button class="bl_burger">
-              <span class="bl_burger_inner">
-                <span class="bl_burger_bar"></span>
-                <span class="bl_burger_bar"></span>
-                <span class="bl_burger_bar"></span>
-                <span class="bl_burger_txt"><img src="../images/common/burger_menu.svg" alt="MENU" width="80" height="20"></span>
-              </span>
-            </button><!-- /.bl_header_burger -->
-          </div>
         </div>
         <!-- /.ly_header_inner -->
       </header>
@@ -93,23 +88,11 @@
                 <img src="../images/lawyer/mv_mainTtl.svg" alt="弁護士専門の転職エージェントが期待を超える選択肢を" width="620" height="90">
               </h1>
 
-              <p class="bl_mv_txt pc">
-                大手法律事務所、人気企業の企業内弁護士、PEファンド、<br>
-                ベンチャーキャピタルなど非公開求人を多数保有。<br>
-                サービスに登録頂くと非公開求人のご案内メールが受け取れます。
+              <p class="bl_mv_txt">
+                大手法律事務所、<br class="sp">人気企業の企業内弁護士、PEファンド、<br>
+                ベンチャーキャピタルなど<br class="sp">非公開求人を多数保有。<br>
+                サービスに登録頂くと非公開求人の<br class="sp">ご案内メールが受け取れます。
               </p>
-
-              <div class="bl_mv_box sp">
-                <ul class="bl_box_list">
-                  <li class="bl_box_item">総合商社</li>
-                  <li class="bl_box_item">グローバルメーカー</li>
-                  <li class="bl_box_item">ヘルスケア</li>
-                  <li class="bl_box_item">金融・PEファンド</li>
-                  <li class="bl_box_item">IT・通信・インフラ</li>
-                  <li class="bl_box_item">資源・素材</li>
-                </ul>
-                <p class="bl_box_txt">登録・相談後に非公開求人を<br>含めた案内メールが受信可能</p>
-              </div>
 
               <a href="https://agaroot-career.jp/entry/" class="el_btn el_btn__arrow el_red bl_mv_btn" target="_blank">転職エージェントに相談（無料）</a>
 
@@ -131,139 +114,269 @@
 
             <h2 class="el_sec_mainTtl">弁護士の求人を探す</h2>
 
-            <ul class="bl_select_list">
-              <li class="bl_select_item">
-                <button class="bl_item_btn">
-                  <span class="bl_item_btn_inner"><span class="bl_item_btn_conts">業務</span></span>
-                </button>
-                <div class="bl_item_contsBox">
-                  <div class="bl_item_contsWrapper">
-                    <ul class="bl_conts_list">
-                      <li class="bl_conts_item"><label><input type="radio" name="industry">業務1</label></li>
-                      <li class="bl_conts_item"><label><input type="radio" name="industry">業務2</label></li>
-                      <li class="bl_conts_item"><label><input type="radio" name="industry">業務3</label></li>
-                      <li class="bl_conts_item"><label><input type="radio" name="industry">業務4</label></li>
-                      <li class="bl_conts_item"><label><input type="radio" name="industry">業務5</label></li>
-                      <li class="bl_conts_item"><label><input type="radio" name="industry">業務6</label></li>
-                      <li class="bl_conts_item"><label><input type="radio" name="industry">業務7</label></li>
-                      <li class="bl_conts_item"><label><input type="radio" name="industry">業務8</label></li>
-                      <li class="bl_conts_item"><label><input type="radio" name="industry">業務9</label></li>
-                      <li class="bl_conts_item"><label><input type="radio" name="industry">業務10</label></li>
-                      <li class="bl_conts_item"><label><input type="radio" name="industry">業務11</label></li>
-                      <li class="bl_conts_item"><label><input type="radio" name="industry">業務12</label></li>
-                      <li class="bl_conts_item"><label><input type="radio" name="industry">業務13</label></li>
-                      <li class="bl_conts_item"><label><input type="radio" name="industry">業務14</label></li>
-                    </ul>
+            <form id="job-based-top-form" action="/job" method="get">
+
+              <dl class="bl_word_def">
+                <dt class="bl_word_dttl">フリーワード検索</dt>
+                <dd class="bl_word_ditem"><input type="text" placeholder="入力してください"></dd>
+              </dl>
+
+              <ul class="bl_select_list">
+                <li class="bl_select_item">
+                  <select name="businessTypeIds" id="business-type-ids">
+                    <option value="">業種</option>
+                    <option value="[16]">法律事務所・弁護士法人</option>
+                    <option value="[18]">監査法人・会計・税理士事務所</option>
+                    <option value="[19]">メーカー</option>
+                    <option value="[20]">商社</option>
+                    <option value="[21]">金融・保険</option>
+                    <option value="[22]">IT・インターネット・通信</option>
+                    <option value="[23]">製薬・ヘルスケア・医療機器</option>
+                    <option value="[24]">インフラ・エネルギー</option>
+                    <option value="[25]">マスコミ・広告・メディア</option>
+                    <option value="[26]">コンサルティング</option>
+                    <option value="[27]">教育・人材</option>
+                    <option value="[28]">運輸・物流・倉庫</option>
+                    <option value="[29]">不動産・建設</option>
+                    <option value="[30]">流通・小売・サービス</option>
+                    <option value="[31]">エンターテインメント</option>
+                    <option value="[17]">特許事務所・弁理士法人</option>
+                    <option value="[32]">司法書士法人・事務所</option>
+                    <option value="[33]">土地家屋調査士法人・事務所</option>
+                  </select>
+                </li>
+                <li class="bl_select_item">
+                  <select name="prefectures" id="prefectures">
+                    <option value="">勤務地</option>
+                    <option value="[2]">北海道</option>
+                    <option value="[3]">青森県</option>
+                    <option value="[4]">岩手県</option>
+                    <option value="[5]">宮城県</option>
+                    <option value="[6]">秋田県</option>
+                    <option value="[7]">山形県</option>
+                    <option value="[8]">福島県</option>
+                    <option value="[9]">茨城県</option>
+                    <option value="[10]">栃木県</option>
+                    <option value="[11]">群馬県</option>
+                    <option value="[12]">埼玉県</option>
+                    <option value="[13]">千葉県</option>
+                    <option value="[1]">東京都</option>
+                    <option value="[14]">神奈川県</option>
+                    <option value="[19]">山梨県</option>
+                    <option value="[23]">愛知県</option>
+                    <option value="[21]">岐阜県</option>
+                    <option value="[24]">三重県</option>
+                    <option value="[22]">静岡県</option>
+                    <option value="[16]">富山県</option>
+                    <option value="[17]">石川県</option>
+                    <option value="[18]">福井県</option>
+                    <option value="[20]">長野県</option>
+                    <option value="[15]">新潟県</option>
+                    <option value="[27]">大阪府</option>
+                    <option value="[26]">京都府</option>
+                    <option value="[28]">兵庫県</option>
+                    <option value="[25]">滋賀県</option>
+                    <option value="[29]">奈良県</option>
+                    <option value="[30]">和歌山県</option>
+                    <option value="[31]">鳥取県</option>
+                    <option value="[32]">島根県</option>
+                    <option value="[33]">岡山県</option>
+                    <option value="[34]">広島県</option>
+                    <option value="[35]">山口県</option>
+                    <option value="[36]">徳島県</option>
+                    <option value="[37]">香川県</option>
+                    <option value="[38]">愛媛県</option>
+                    <option value="[39]">高知県</option>
+                    <option value="[40]">福岡県</option>
+                    <option value="[41]">佐賀県</option>
+                    <option value="[42]">長崎県</option>
+                    <option value="[43]">熊本県</option>
+                    <option value="[44]">大分県</option>
+                    <option value="[45]">宮崎県</option>
+                    <option value="[46]">鹿児島県</option>
+                    <option value="[47]">沖縄県</option>
+                  </select>
+                </li>
+              </ul>
+
+              <dl class="bl_search_def">
+                <dt>こだわり条件選択</dt>
+                <dd>
+                  <ul class="bl_dd_checkList">
+                    <li class="bl_dd_checkItem">
+                      <label>
+                        <input type="checkbox" value="14" class="special_condition_checkbox">
+                        大手
+                      </label>
+                    </li>
+                    <li class="bl_dd_checkItem">
+                      <label>
+                        <input type="checkbox" value="13" class="special_condition_checkbox">
+                        外資系
+                      </label>
+                    </li>
+                    <li class="bl_dd_checkItem">
+                      <label>
+                        <input type="checkbox" value="15" class="special_condition_checkbox">
+                        上場企業
+                      </label>
+                    </li>
+                    <li class="bl_dd_checkItem">
+                      <label>
+                        <input type="checkbox" value="16" class="special_condition_checkbox">
+                        上場準備中
+                      </label>
+                    </li>
+                    <li class="bl_dd_checkItem">
+                      <label>
+                        <input type="checkbox" value="19" class="special_condition_checkbox">
+                        英語力が活かせる
+                      </label>
+                    </li>
+                    <li class="bl_dd_checkItem">
+                      <label>
+                        <input type="checkbox" value="2" class="special_condition_checkbox">
+                        リモートワーク可
+                      </label>
+                    </li>
+                    <li class="bl_dd_checkItem">
+                      <label>
+                        <input type="checkbox" value="27" class="special_condition_checkbox">
+                        企業内弁護士
+                      </label>
+                    </li>
+                    <li class="bl_dd_checkItem">
+                      <label>
+                        <input type="checkbox" value="29" class="special_condition_checkbox">
+                        企業法務
+                      </label>
+                    </li>
+                    <li class="bl_dd_checkItem">
+                      <label>
+                        <input type="checkbox" value="28" class="special_condition_checkbox">
+                        一般民事
+                      </label>
+                    </li>
+                    <li class="bl_dd_checkItem">
+                      <label>
+                        <input type="checkbox" value="26" class="special_condition_checkbox">
+                        個人受任可
+                      </label>
+                    </li>
+                    <li class="bl_dd_checkItem">
+                      <label>
+                        <input type="checkbox" value="25" class="special_condition_checkbox">
+                        弁護士会費用負担有
+                      </label>
+                    </li>
+                    <li class="bl_dd_checkItem">
+                      <label>
+                        <input type="checkbox" value="10" class="special_condition_checkbox">
+                        留学支援制度有
+                      </label>
+                    </li>
+                    <li class="bl_dd_checkItem">
+                      <label>
+                        <input type="checkbox" value="21" class="special_condition_checkbox">
+                        女性活躍
+                      </label>
+                    </li>
+                    <li class="bl_dd_checkItem">
+                      <label>
+                        <input type="checkbox" value="20" class="special_condition_checkbox">
+                        シニア活躍
+                      </label>
+                    </li>
+                    <li class="bl_dd_checkItem">
+                      <label>
+                        <input type="checkbox" value="3" class="special_condition_checkbox">
+                        副業可
+                      </label>
+                    </li>
+                    <li class="bl_dd_checkItem">
+                      <label>
+                        <input type="checkbox" value="4" class="special_condition_checkbox">
+                        転勤無
+                      </label>
+                    </li>
+                    <li class="bl_dd_checkItem">
+                      <label>
+                        <input type="checkbox" value="5" class="special_condition_checkbox">
+                        フレックス制
+                      </label>
+                    </li>
+                    <li class="bl_dd_checkItem">
+                      <label>
+                        <input type="checkbox" value="9" class="special_condition_checkbox">
+                        SO制度有
+                      </label>
+                    </li>
+                    <li class="bl_dd_checkItem">
+                      <label>
+                        <input type="checkbox" value="6" class="special_condition_checkbox">
+                        残業少なめ
+                      </label>
+                    </li>
+                    <li class="bl_dd_checkItem">
+                      <label>
+                        <input type="checkbox" value="11" class="special_condition_checkbox">
+                        海外駐在可能性有
+                      </label>
+                    </li>
+                    <li class="bl_dd_checkItem">
+                      <label>
+                        <input type="checkbox" value="7" class="special_condition_checkbox">
+                        時短勤務可
+                      </label>
+                    </li>
+                    <li class="bl_dd_checkItem">
+                      <label>
+                        <input type="checkbox" value="8" class="special_condition_checkbox">
+                        社宅制度有
+                      </label>
+                    </li>
+                    <li class="bl_dd_checkItem">
+                      <label>
+                        <input type="checkbox" value="12" class="special_condition_checkbox">
+                        育児託児支援制度有
+                      </label>
+                    </li>
+                    <li class="bl_dd_checkItem">
+                      <label>
+                        <input type="checkbox" value="22" class="special_condition_checkbox">
+                        非常勤
+                      </label>
+                    </li>
+                    <li class="bl_dd_checkItem">
+                      <label>
+                        <input type="checkbox" value="23" class="special_condition_checkbox">
+                        管理職
+                      </label>
+                    </li>
+                    <li class="bl_dd_checkItem">
+                      <label>
+                        <input type="checkbox" value="24" class="special_condition_checkbox">
+                        CXO候補
+                      </label>
+                    </li>
+                    <li class="bl_dd_checkItem">
+                      <label>
+                        <input type="checkbox" value="1" class="special_condition_checkbox">
+                        フルリモートワーク
+                      </label>
+                    </li>
+                  </ul>
+
+                  <div class="bl_dd_display">
+                    <button>すべて表示</button>
                   </div>
-                </div>
-              </li>
-              <li class="bl_select_item">
-                <button class="bl_item_btn">
-                  <span class="bl_item_btn_inner"><span class="bl_item_btn_conts">勤務地</span></span>
-                </button>
-                <div class="bl_item_contsBox">
-                  <div class="bl_item_contsWrapper">
-                    <ul class="bl_conts_list">
-                      <li class="bl_conts_item"><label><input type="checkbox">勤務地1</label></li>
-                      <li class="bl_conts_item"><label><input type="checkbox">勤務地2</label></li>
-                      <li class="bl_conts_item"><label><input type="checkbox">勤務地3</label></li>
-                      <li class="bl_conts_item"><label><input type="checkbox">勤務地4</label></li>
-                      <li class="bl_conts_item"><label><input type="checkbox">勤務地5</label></li>
-                      <li class="bl_conts_item"><label><input type="checkbox">勤務地6</label></li>
-                      <li class="bl_conts_item"><label><input type="checkbox">勤務地7</label></li>
-                      <li class="bl_conts_item"><label><input type="checkbox">勤務地8</label></li>
-                      <li class="bl_conts_item"><label><input type="checkbox">勤務地9</label></li>
-                      <li class="bl_conts_item"><label><input type="checkbox">勤務地10</label></li>
-                      <li class="bl_conts_item"><label><input type="checkbox">勤務地11</label></li>
-                      <li class="bl_conts_item"><label><input type="checkbox">勤務地12</label></li>
-                      <li class="bl_conts_item"><label><input type="checkbox">勤務地13</label></li>
-                      <li class="bl_conts_item"><label><input type="checkbox">勤務地14</label></li>
-                    </ul>
-                  </div>
-                </div>
-              </li>
-            </ul>
 
-            <dl class="bl_search_def">
-              <dt>こだわり条件選択</dt>
-              <dd>
-                <ul class="bl_dd_checkList">
-                  <li class="bl_dd_checkItem">
-                    <label><input type="checkbox">年収1,000万円以上</label>
-                  </li>
-                  <li class="bl_dd_checkItem">
-                    <label><input type="checkbox">年収1,500万円以上</label>
-                  </li>
-                  <li class="bl_dd_checkItem">
-                    <label><input type="checkbox">事務所未経験可</label>
-                  </li>
-                  <li class="bl_dd_checkItem">
-                    <label><input type="checkbox">企業法務未経験可</label>
-                  </li>
-                  <li class="bl_dd_checkItem">
-                    <label><input type="checkbox">弁護士会費用負担</label>
-                  </li>
-                  <li class="bl_dd_checkItem">
-                    <label><input type="checkbox">フルリモート</label>
-                  </li>
-                  <li class="bl_dd_checkItem">
-                    <label><input type="checkbox">時短勤務可</label>
-                  </li>
-                  <li class="bl_dd_checkItem">
-                    <label><input type="checkbox">転勤なし</label>
-                  </li>
-                  <li class="bl_dd_checkItem">
-                    <label><input type="checkbox">副業可</label>
-                  </li>
-                  <li class="bl_dd_checkItem">
-                    <label><input type="checkbox">英語力が活かせる</label>
-                  </li>
-                  <li class="bl_dd_checkItem">
-                    <label><input type="checkbox">完全週休二日制（土日）</label>
-                  </li>
-                  <li class="bl_dd_checkItem">
-                    <label><input type="checkbox">年収1,000万円以上</label>
-                  </li>
-                  <li class="bl_dd_checkItem">
-                    <label><input type="checkbox">年収1,500万円以上</label>
-                  </li>
-                  <li class="bl_dd_checkItem">
-                    <label><input type="checkbox">事務所未経験可</label>
-                  </li>
-                  <li class="bl_dd_checkItem">
-                    <label><input type="checkbox">企業法務未経験可</label>
-                  </li>
-                  <li class="bl_dd_checkItem">
-                    <label><input type="checkbox">弁護士会費用負担</label>
-                  </li>
-                  <li class="bl_dd_checkItem">
-                    <label><input type="checkbox">フルリモート</label>
-                  </li>
-                  <li class="bl_dd_checkItem">
-                    <label><input type="checkbox">時短勤務可</label>
-                  </li>
-                  <li class="bl_dd_checkItem">
-                    <label><input type="checkbox">転勤なし</label>
-                  </li>
-                  <li class="bl_dd_checkItem">
-                    <label><input type="checkbox">副業可</label>
-                  </li>
-                  <li class="bl_dd_checkItem">
-                    <label><input type="checkbox">英語力が活かせる</label>
-                  </li>
-                  <li class="bl_dd_checkItem">
-                    <label><input type="checkbox">完全週休二日制（土日）</label>
-                  </li>
-                </ul>
+                </dd>
+              </dl>
 
-                <div class="bl_dd_display">
-                  <button>すべて表示</button>
-                </div>
+              <button class="bl_search_btn el_btn el_btn__search el_red">検索</button>
 
-              </dd>
-            </dl>
-
-            <button class="bl_search_btn el_btn el_btn__search el_red">検索</button>
+            </form>
 
           </div><!-- /.ly_cont_inner -->
         </section><!-- /.bl_search -->
@@ -301,7 +414,7 @@
                 <div class="bl_card_body">
                   <h3 class="bl_card_ttl">アガルートのネットワーク</h3>
                   <p class="bl_card_txt">
-                    アガルートキャリアは、グループの<span class="hp_color__accent02 hp_bold">アガルートアカデミーで多数の司法試験合格者・法曹を輩出</span>しています。また、様々な企業・事務所との独自のネットワークを有しています。
+                    アガルートキャリアは、グループの<span class="hp_bold">アガルートアカデミーで多数の司法試験合格者・法曹を輩出</span>しています。また、様々な企業・事務所との独自のネットワークを有しています。
                   </p>
                 </div>
               </li>
@@ -316,7 +429,7 @@
 
             <h2 class="el_sec_mainTtl"><img src="../images/common/lowerCta_ttl.svg" alt="転職エージェントに相談すると非公開求人をご紹介" width="462" height="92"></h2>
 
-            <p class="bl_lowerCta_txt">転職エージェントがご要望をヒアリングして、<br>最適な求人をご紹介いたします。</p>
+
 
             <a href="https://agaroot-career.jp/entry/" target="_blank" class="el_btn el_btn__arrow el_red bl_lowerCta_btn">転職エージェントに相談（無料）</a>
 
@@ -596,8 +709,6 @@
 
             <h2 class="el_sec_mainTtl"><img src="../images/common/lowerCta_ttl.svg" alt="転職エージェントに相談すると非公開求人をご紹介" width="462" height="92"></h2>
 
-            <p class="bl_lowerCta_txt">転職エージェントがご要望をヒアリングして、<br>最適な求人をご紹介いたします。</p>
-
             <a href="https://agaroot-career.jp/entry/" target="_blank" class="el_btn el_btn__arrow el_red bl_lowerCta_btn">転職エージェントに相談（無料）</a>
 
           </div><!-- /.ly_cont_inner -->
@@ -607,7 +718,7 @@
         <section class="bl_conditions">
           <div class="ly_cont_inner">
 
-            <h2 class="el_sec_mainTtl el_deco_under">よくある条件から<br class="sp">弁護士の求人を探す</h2>
+            <h2 class="el_sec_mainTtl el_deco_under">よくある条件から弁護士の求人を探す</h2>
 
             <ul class="bl_conditions_list">
               <li id="conditions_industry" class="bl_conditions_item">
@@ -762,7 +873,6 @@
             <figure class="bl_foot_logo">
               <img src="../images/common/logo_footer.svg" alt="AGAROOT CAREER" width="184" height="46">
             </figure>
-            <span class="bl_foot_logoTxt">弁護士専門の転職エージェント</span>
           </a>
 
           <div class="bl_foot_menuWrapper">
@@ -796,8 +906,7 @@
         </div><!-- /.bl_pagetop -->
 
         <div class="bl_foot_btmBnr sp">
-          <p class="bl_btmBnr_txt">ハイクラスの非公開求人多数</p>
-          <a href="" class="el_btn el_btn__arrow el_gold bl_btmBnr_btn">転職エージェントに相談（無料）</a>
+          <a href="" class="el_btn el_btn__arrow bl_btmBnr_btn"><span class="bl_btmBnr_btn_deco">弁護士専門の</span>転職エージェントに相談する</a>
         </div>
 
         <div class="bl_foot_copyright">
