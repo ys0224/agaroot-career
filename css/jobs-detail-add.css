@@ -34,7 +34,7 @@ connection
   margin-top: min(8 / 1280 * 100vw, 8px);
 }
 .bl_connection_jobs .bl_jobs_link {
-  display: inline-block;
+  display: block;
 }
 .bl_connection_jobs .bl_jobs_link_inner {
   line-height: calc(20 / 14);
@@ -53,14 +53,13 @@ connection
 }
 .bl_connection_jobs .bl_jobs_link.--new .bl_jobs_link_inner::after {
   position: absolute;
-  top: 50%;
+  bottom: 0;
   right: 0;
-  transform: translateY(-50%);
   content: "NEW";
   flex: 1;
   background: #9b1613;
-  padding: 0 min(6 / 1280 * 100vw, 6px) min(2 / 1280 * 100vw, 2px);
-  font-size: min(14 / 1280 * 100vw, 14px);
+  padding: 0 min(6 / 1280 * 100vw, 6px) min(1 / 1280 * 100vw, 1px);
+  font-size: min(12 / 1280 * 100vw, 12px);
   color: #fff;
   line-height: calc(20 / 14);
 }
@@ -92,17 +91,21 @@ connection
   }
   .bl_connection_jobs .bl_jobs_link_wrapper + .bl_jobs_link_wrapper {
     margin-top: 12px;
+    padding-top: 12px;
+    border-top: 1px solid #d6bcbc;
   }
   .bl_connection_jobs .bl_jobs_link_inner {
+    display: initial;
+    text-decoration: none;
     font-size: 24px;
-    max-width: 690px;
-  }
-  .bl_connection_jobs .bl_jobs_link.--new .bl_jobs_link_inner {
-    padding-right: 90px;
+    width: 100%;
+    white-space: initial;
+    text-overflow: initial;
   }
   .bl_connection_jobs .bl_jobs_link.--new .bl_jobs_link_inner::after {
+    right: -55px;
     padding: 0 9px 3px;
-    font-size: 24px;
+    font-size: 20px;
   }
 }
 /*=======================================================
@@ -184,10 +187,16 @@ other
   }
   .bl_other_jobs_wrapper + .bl_other_jobs_wrapper {
     margin-top: 12px;
+    padding-top: 12px;
+    border-top: 1px solid #d6bcbc;
   }
   .bl_other_jobs {
+      display: initial;
+    text-decoration: none;
     font-size: 24px;
     max-width: 690px;
+    white-space: initial;
+    text-overflow: initial;
   }
   .bl_other_btn {
     margin-top: 18px;
